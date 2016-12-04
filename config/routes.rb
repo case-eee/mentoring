@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   get '/profile' => 'users#show'
   get '/auth' => 'users#auth'
-  get '/home' => 'users#home'
+  get '/home' => 'users#home', as: :home
+
+  resources :mentors, only: [:new, :create]
 end

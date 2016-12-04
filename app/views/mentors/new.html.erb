@@ -1,0 +1,17 @@
+<h1>Become a mentor!</h1>
+
+<%= form_tag :mentors do |f| %>
+  <%= label_tag :name %>
+  <%= text_field_tag "user[name]", current_user.name, required: true %>
+
+  <%= label_tag :email %>
+  <%= email_field_tag "user[email]", current_user.email, required: true %>
+
+  <%= label_tag :location %>
+  <%= text_field_tag "user[location]", current_user.location, required: true %>
+
+  <%= label_tag :bio %>
+  <%= text_area_tag "user[bio]", current_user.bio, required: true %>
+
+  <%= submit_tag %>
+<% end %>
