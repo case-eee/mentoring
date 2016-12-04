@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   get '/profile' => 'users#show'
   get '/auth' => 'users#auth'
+  get '/home' => 'users#home'
 end
